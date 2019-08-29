@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "name": "resume-data-service",
+  "alias": [
+    "resume-data-service"
+  ],
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "silent": false,
+    "autoJobCancelation": false
+  },
+  "public": false,
+  "env": {
+    "APP_IDENTITY": "@app_identity",
+    "APP_VERSION": "@app_version",
+    "NOW_AUTH_TOKEN": "@now_auth_token",
+    "NOW_SCOPE_FQDN": "@now_scope_fqdn",
+    "NOW_SCOPE_SUBDOMAIN": "@now_scope_subdomain",
+    "NOW_SCOPE_GROUP": "@now_scope_group",
+    "NOW_SCOPE_TYPE": "@now_scope_type",
+    "NOW_SCOPE_IDENTITY": "@now_scope_identity"
+  },
+  "builds": [
+    {
+      "src": "api/**",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/([^/]+)",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "api/errors/index.js"
+    }
+  ]
+}
