@@ -6,7 +6,7 @@
   "scripts": {
     "deploy:development": "now -A development.now.json -e NODE_ENV=development -e APP_IDENTITY=@app_identity -e APP_VERSION=@app_version -e NOW_AUTH_TOKEN=@now_auth_token -e NOW_SCOPE_FQDN=@now_scope_fqdn -e NOW_SCOPE_SUBDOMAIN=@now_scope_subdomain -e NOW_SCOPE_GROUP=@now_scope_group -e NOW_SCOPE_TYPE=@now_scope_type -e NOW_SCOPE_IDENTITY=@now_scope_identity",
     "deploy:staging": "now --target staging -A staging.now.json -e STAGED=true",
-    "deploy:production": "now --target production  -A production.now.json -e STAGED=false"
+    "deploy:production": "now --prod  -A production.now.json -e STAGED=false"
   },
   "dependencies": {
     "add": "^2.0.6",
