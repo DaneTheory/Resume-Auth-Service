@@ -2,7 +2,7 @@
   "version": 2,
   "name": "resume-data-service",
   "alias": [
-    "resume-data-service.now.sh"
+    "resume-data-service"
   ],
   "github": {
     "enabled": true,
